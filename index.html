@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Monica Sethuraman Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"> Monica Sethuraman</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/Moni_2.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hola! </span>
+			            <h1 class="mb-4 mt-3">I'm <span>Monica Sethuraman</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						' Data Analyst  ',
+						' Business Analsyt  ',
+						' Engineer  ',
+						' Talks more about data   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 300); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 300);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Data Analyst </h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/monica-sethuraman-0202b3136/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS" class="btn btn-white btn-outline-white py-3 px-4">My Projects</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="Moni-img">
+										<img src="images/Moni.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Monica Sethuraman</span></p>
+										<p><span class="title-s">Job Role: </span> <span> Catalog Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>3 Years </span></p>
+										<p><span class="title-s">Address: </span> <span>Chennai, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Advanced Excel</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Power BI</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Python</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+										</div>
+
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SQL</span> <span class="pull-right">65%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With over 3 years of comprehensive experience in the field of data  & analytics, accompanied by a Postgraduate degree in Data Analytics 
+									Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
+									Demonstrated success in leading impactful projects Experienced in various data analytics processes aimed at enhancing the Amazon retail catalog, where I led data scrubbing initiatives to ensure data integrity and accuracy,
+									resulting in more reliable reporting and analysis. .</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, Digital Marketing</span></li>
+									<li class="d-flex"><span>Education:</span> <span> PG - Data Analytics And decision making , Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, tamil</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Dashboard in Excel &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Pandas, Excel, Predictive data analysis, Google Analytics &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Fitness Coach, Artist, Travelling</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/monica-sethuraman-0202b3136/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Data Analyst with 3 years of experience driving business strategies through data-driven insights. Streamlined Amazon's soft lines catalog clean-up for marketing and Sales data requests, reducing headcount by 20%. Managed daily data operations, deep understanding of vast data sources and know exactly how, when, and which data to use to tackle business problems. .</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2022</span>
+						<h2> Catalog  Analyst</h2>
+						<span class="position">Amazon</span>
+						<p class="mt-4">Amazon, an American multinational technology and a customer centric company, engaged in e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence. 
+							<ul>
+								<li>• Define project scopes, and ensure alignment with business priorities, used SQL and Python to collect, clean, analyze, and structure large datasets, improving accuracy and efficiency, and customer surveys data, identified an increasing demand and launched product/brand line.</li>
+								<li>• Led process improvement initiatives with end-to-end solutions , got model performance of 92%.Led to 20% MoM increase in the project success.</li>
+								<li>• Built analytical models project management dashboards to identify patterns and root causes supporting decision-making and enhancing efficiency. Evaluated new revenue opportunities and supported new brand and retail business projects, maintaining strong stakeholder relationships..</li>
+								<li>• Developed month-end data quality reporting, presentations and maintained interactive dashboards using Tableau and Power BI to visualize key performance metrics, supporting decision-making for operational and leadership teams.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2023</span>
+    					<h2>Data Analytics and Business decision making </h2>
+    					<span class="position">Durham College , Canada , Oshawa </span>
+    					<p class="mt-4">Grade: Topped Honor roll.</p>
+						<p class="mt-4">Credit: 4.25/5 .</p>
+    				</div>
+    			</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2022</span>
+    					<h2>International Business Management</h2>
+    					<span class="position">Centennial College , Canada , Oshawa </span>
+    					<p class="mt-4">Grade:  Distinction.</p>		
+    				</div>
+				</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2013-2017</span>
+    					<h2>Bachelors in Engineering</h2>
+    					<span class="position">Anna University</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+						<p class="mt-4">Credit: 7.25/10 .</p>
+    				</div>
+				</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2012-2013</span>
+    					<h2>High School </h2>
+    					<span class="position">St. Dominic's Anglo Indian Higher secondary school</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+						<p class="mt-4">Credit: 939/1200 </p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1Ye8ejvriEeOeLTy7vRo0m5fzMMKnOOos/view" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on Excel , SQL, Python, Power BI & ML .</p>
+          </div>
+
+        	
+		</div>
+		<br>
+		<!-- added justify-content-center to center align the last two projects -->
+	  <div class="row d-flex justify-content-center"> 
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/commit/54a36a34275bd59f8a552354ab6ba41d47580564" class="block-20 zoom-effect" style="background-image: url('images/Dashboard_2.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/commit/54a36a34275bd59f8a552354ab6ba41d47580564">Heathcare Dashboard and analysis using PowerBI</a></h3>
+			  <p>Analyzed healthcare data using Power BI to create an interactive dashboard for monitoring patient wait lists and case types, improving insights into healthcare operations and patient management.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/EXCEL%20DASHBOARD%20-%20PROJEC%20MANAGEMENT%20.jpg" class="block-20 zoom-effect" style="background-image: url('images/Project Management.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/EXCEL%20DASHBOARD%20-%20PROJEC%20MANAGEMENT%20.jpg">Project Management Analysis and Dashboard using excel</a></h3>
+			  <p> Created an interactive project management dashboard using Excel to track project progress, budget vs. actual spend, and task completion rates. This dashboard provides a clear visual representation of project status and helps in effective decision-making and resource allocation.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+
+				
+
+
+              </div>
+            </div>
+
+				
+		</div>
+		<br>
+		<!-- added justify-content-center to center align the last two projects -->
+	  <div class="row d-flex justify-content-center"> 
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/Excel%20Dashboard%20-%20Orders%20Shipment%20Tracking.jpg" class="block-20 zoom-effect" style="background-image: url('images/Excel Dashboard - Orders Shipment Tracking.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/Excel%20Dashboard%20-%20Orders%20Shipment%20Tracking.jpg"> Orders Shipment tracking Data Analysis Dashboard</a></h3>
+			  <p> Analyzed order shipment data using Power BI to create an interactive dashboard for tracking and visualizing key metrics, enhancing decision-making and operational efficiency.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/EXCEL%20DASHBOARD%20-%20TRANSPORTATION%20DASHBOARD%20ANALYSIS.jpg" class="block-20 zoom-effect" style="background-image: url('images/Transportation Dashboard .jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/EXCEL%20DASHBOARD%20-%20TRANSPORTATION%20DASHBOARD%20ANALYSIS.jpg">Bus Transportation Analysis Dashboard</a></h3>
+			  <p> Created an interactive bus transportation dashboard using advanced Excel techniques to identify peak operational hours and optimize route utilization.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+		</div>
+		<br>
+		<!-- added justify-content-center to center align the last two projects -->
+	  <div class="row d-flex justify-content-center"> 
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/MOVIE%20CORREALTION.ipynb" class="block-20 zoom-effect" style="background-image: url('images/MovieR.jpeg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/MOVIE%20CORREALTION.ipynb"> Correlation Matrix - Movie Box Office by python</a></h3>
+			  <p>Analysis of the movie dataset indicates several notable correlations among key variables. Notably, we observe a strong positive correlation between the variables "gross" and "budget," suggesting that higher movie budgets tend to correlate with higher gross earnings. Additionally, there appears to be a significant positive correlation between "gross" and "votes," indicating that movies with higher viewer engagement, as reflected in votes, tend to achieve higher gross earnings.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/EDA%20On%20lightning%20strikes%20-%202018.ipynb" class="block-20 zoom-effect" style="background-image: url('images/Lightning.jpeg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/EDA%20On%20lightning%20strikes%20-%202018.ipynb">EDA - Lightning strikes using python</a></h3>
+			  <p> Analyzed and performed a complete EDA on data using python techniques to identify the highest strike counts in 2018. Created visualizations to showcase monthly lightning activity, aiding in understanding seasonal patterns.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+		
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/RADIO%20SALES.ipynb" class="block-20 zoom-effect" style="background-image: url('images/Radiosales.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/RADIO%20SALES.ipynb"> Linear Regression Model - Radio sales </a></h3>
+				  <p>Analyzed bus transportation data using advanced Excel techniques to identify peak operational hours and optimize route utilization.</p>
+				</div>
+			  </div>
+			  
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/FEATURE%20ENGINEERING%20WITH%20PYTHON.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/blob/main/FEATURE%20ENGINEERING%20WITH%20PYTHON.ipynb"> Feature Enginneering - Customer Churn by python</a></h3>
+				  <p>Analysed Created a model using feature engineering by improving its predictive power to represent customer loyalty by calculating the percentage of each customer's life spent with the bank.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	
+	
+	<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/Black.jpeg)">
+		<div class="row justify-content-center">
+			<div class="col-md-7 ftco-animate text-center">
+				<h2>More projects on <span> Github </span> </h2>
+				<div class="heading"> 
+					<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+					<br>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	
+	
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Oshawa , Canada </p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+1 289-889-2801</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">monisethu939@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1Ye8ejvriEeOeLTy7vRo0m5fzMMKnOOos/view
+					">resumelink</a></p>
+	          </div>
+          </div>
+	    
+      
+  
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+      </div>
+      <div class="row d-flex">
+        <!-- Project cards go here -->
+        <!-- Add your project cards as needed -->
+      </div>
+      <br>
+      <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+        <li class="ftco-animate normal-txt">Find me on </li>
+        <li class="ftco-animate"><a href="https://www.linkedin.com/in/monica-sethuraman-0202b3136/"><span class="fab fa-linkedin"></span></a></li>
+        <li class="ftco-animate"><a href="https://github.com/MonicaSethuraman/PORTFOLIO_PROJECTS/tree/main"><span class="fab fa-github"></span></a></li>
+        <li class="ftco-animate"><a href="https://www.instagram.com/monicasethuraman/"><span class="fab fa-instagram"></span></a></li>
+      </ul>
+      <br>
+    </div>
+  </section>
+</body>
+</html>
+
+  
+  
+  
+
+
+				
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
